@@ -1,0 +1,3 @@
+Linija 1 ima stvar.Ok
+Linija 2 Ima druga stvar.Prva ne se pokazuva ?!
+Linija 3 hahahaha.
