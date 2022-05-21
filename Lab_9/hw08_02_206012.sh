@@ -1,10 +1,9 @@
 #!/bin/bash
 
 
-filenames=$(ls "$1" |sed '/[A-Z]/d'| grep ".txt$")
+filenames=$(ls "$1" | grep ".txt$" |sed '/[A-Z]/d')
 for file in $filenames
 do
-echo "$file"
-filename=$(echo "$file" | awk '{split($1,arr,".");print arr[1]}')
-mv "$1/$file" "$2/$filename.moved_txt"
+filename=$(echo "$file" | sed 's/\.txt/\.moved_txt/')
+mv $1/$file $2/$filename
 done
