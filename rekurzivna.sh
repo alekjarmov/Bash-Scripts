@@ -1,6 +1,6 @@
 #!/bin/bash
 
-inf() {
+function inf() {
     echo $1
     dpth=$(( $1 +1 ))
     inf $dpth
